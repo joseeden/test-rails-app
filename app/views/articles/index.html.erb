@@ -1,0 +1,19 @@
+<h1>My Blog Articles</h1>
+
+<table>
+  <thead>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Actions</th>
+  </thead>
+    
+  <tbody>
+    <% @articles.each do |row_article| %>
+      <tr>
+        <td><%= row_article.title %></td>
+        <td><%= row_article.description %></td>
+        <td>Placeholder</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
