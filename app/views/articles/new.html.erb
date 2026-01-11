@@ -1,0 +1,17 @@
+<h1>Create a New Entry</h1>
+
+<%= form_with scope: :article, 
+              url: articles_path, 
+              data: { turbo: false } do |field| %>
+  <p>
+    <%= field.label :title %><br>
+    <%= field.text_field :title %>
+  </p>
+  <p>
+    <%= field.label :description %><br>
+    <%= field.text_area :description %>
+  </p>
+  <p>
+    <%= field.submit "Publish" %>
+  </p>
+<% end %>
