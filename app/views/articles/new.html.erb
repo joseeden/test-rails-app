@@ -1,5 +1,14 @@
 <h1>Create a New Entry</h1>
 
+<% if @article.errors.any? %>
+  <h2>Fix the errors below to save the article: </h2>
+  <ul>
+    <% @article.errors.full_messages.each do |err_msg| %>
+      <li><%= err_msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_with scope: :article, 
               url: articles_path, 
               data: { turbo: false } do |field| %>
